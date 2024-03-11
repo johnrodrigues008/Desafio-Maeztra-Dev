@@ -86,7 +86,7 @@ const Fullbanner: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="fullbanner w-full">
+      <div style={{ minHeight: "280px" }} className="fullbanner w-full">
         <img
           className={`w-full ${
             transitioning
@@ -95,6 +95,7 @@ const Fullbanner: React.FC = () => {
           }`}
           src={slides[currentSlide].imageUrl}
           alt={`Carousel Slide ${currentSlide + 1}`}
+          onLoad={() => setTransitioning(false)}
         />
       </div>
       <div className="absolute inset-0 flex justify-center flex-col  px-[63px] sm:px-[83px] lg:ml-[7%]">
