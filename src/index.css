@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/*******************************
+      * Importação das fontes
+*******************************/
+
+@font-face {
+      font-family: "OpenSans-Regular";
+      src: url(./layouts/assets/fonts/Open-sans-Regular.woff2);
+}
+
+@font-face {
+      font-family: "Montserrat-Regular";
+      src: url(./layouts/assets/fonts/Montserrat-Regular.woff2);
+}
+
+@font-face {
+      font-family: "Montserrat-Bold";
+      src: url(./layouts/assets/fonts/Montserrat-Bold.woff2);
+}
+
+@font-face {
+      font-family: "Titillium-Regular";
+      src: url(./layouts/assets/fonts/Titillium-Web-Regular.woff2);
+} 
+
+@font-face {
+      font-family: "Titillium-Bold";
+      src: url(./layouts/assets/fonts/Titillium-Web-Bold.woff2);
+}
+ 
+/* Classes para as fontes */
+
+.OpenSans {
+      font-family: "OpenSans-Regular", sans-serif;
+}
+
+.Montserrat-Regular {
+      font-family: "Montserrat-Regular", sans-serif;
+}
+
+.Montserrat-Bold {
+      font-family: "Montserrat-Bold", sans-serif;
+}
+
+.Titillium-Bold {
+      font-family: "Titillium-Bold", sans-serif;
+}
+ 
+/*******************************
+      * Estilos gerais
+*******************************/
+
+* {
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Titillium-Regular";
+      font-size: 14px;
+      background: var(--color-5-500);
+}
+
+
+
+

@@ -1,0 +1,102 @@
+.tipbar {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+      margin-top: 16px;
+      border-radius: 4px;
+}
+
+.tipbar::-webkit-scrollbar {
+      display: none;
+}
+
+.tipbar-card {
+      flex: 0 0 auto;
+      width: 270px;
+      height: 64px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: tipbarIn 0.5s forwards;
+      border-radius: 4px;
+      user-select: none;
+}
+
+.tipbar-card:first-child {
+      margin-left: 20px;
+}
+
+.tipbar-card:last-child {
+      margin-right: 0;
+      margin-right: 20px;
+}
+
+.tipbar-card.shadow img {
+      width: 298px;
+}
+
+@keyframes tipbarIn {
+      to {
+            opacity: 1;
+            transform: translateX(0);
+      }
+}
+
+@media only screen and (min-width: 1020px) {
+      .tipbar-card:first-child {
+            margin-left: 50px;
+      }
+
+      .tipbar-card:last-child {
+            margin-right: 0;
+            margin-right: 50px;
+      }
+
+      .tipbar-selected {
+            width: 120%;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            right: -120%;
+            animation: moveLeft 40s ease-in-out infinite alternate;
+            top: 24px;
+      }
+
+      @keyframes moveLeft {
+            0% {
+                  right: -20%;
+            }
+
+            50% {
+                  right: 2%;
+            }
+
+            100% {
+                  right: -20%;
+            }
+      }
+
+      body {
+            overflow-x: hidden;
+      }
+}
+
+@media only screen and (min-width: 1600px) {
+      .tipbar {
+            display: flex;
+            justify-content: center;
+      }
+
+      .tipbar-selected {
+            width: auto;
+            display: flex;
+            position: static;
+            top: auto;
+            right: auto;
+            animation: none;
+      }
+}

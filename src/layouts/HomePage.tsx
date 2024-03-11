@@ -1,10 +1,23 @@
 import "./HomePage.css";
+import Fullbanner from "./components/Fullbanner/Fullbanner";
+import Header from "./components/Header/Header";
+import Why from "./components/Why/Why";
+import Brands from "./components/Brands/Brands";
+import Vitrine from "./components/Vitrine/Vitrine";
+import Collection from "./components/Collection/Collection";
+import Newsletter from "./components/Newsletter/Newsletter";
 
 const HomePage = () => {
   return (
-    <div className="text-2 w-full h-[100vh] flex justify-center items-center bg-black">
-      <h1 className="text-2xl text-cyan-300">Desafio Maeztra Dev</h1>
-    </div>
+    <>
+      <Header />
+      <Fullbanner />
+      <Why />
+      <Brands />
+      <Vitrine />
+      <Collection />
+      <Newsletter />
+    </>
   );
 };
 
