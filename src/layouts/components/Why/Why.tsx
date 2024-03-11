@@ -75,6 +75,7 @@ const Why = () => {
             className="w-[32px] h-[32px]"
             src={iconWorld}
             alt="Icone do planeta simbolizando os produtos importados"
+            loading="lazy"
           />
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Produtos importados</h3>
@@ -87,6 +88,7 @@ const Why = () => {
             className="w-[32px] h-[32px]"
             src={iconHouse}
             alt="Icone de uma empresa simbolizando o estoque no brasil"
+            loading="lazy"
           />
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Estoque no Brazil</h3>
@@ -99,6 +101,7 @@ const Why = () => {
             className="w-[32px] h-[32px]"
             src={iconTroca}
             alt="Icone de uma caixa com um circulo do infinio em volta simbolizando as trocas rápidas e com garantia."
+            loading="lazy"
           />
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Trocas Garantidas</h3>
@@ -113,6 +116,7 @@ const Why = () => {
             className="w-[32px] h-[32px]"
             src={iconEtiqueta}
             alt="Icone de uma etiqueta simbolizando os descontos"
+            loading="lazy"
           />
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Ganhe 5% off</h3>
@@ -125,6 +129,7 @@ const Why = () => {
             className="w-[32px] h-[32px]"
             src={iconFrete}
             alt="Icone de um caminhão para simbolizar o frete gratis apartir de R$: 499,00"
+            loading="lazy"
           />
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Frete Grátis</h3>

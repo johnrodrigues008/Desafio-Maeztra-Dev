@@ -5,7 +5,7 @@ const Collection = () => {
   return (
     <article className="collection mt-[23px] flex justify-center items-center">
       <div className="container p-[20px] lg:flex lg:items-center">
-        <div >
+        <div>
           <h2 className="Titillium-Bold text-[24px] w-full">Lorem ipsum </h2>
           <p className="mt-[16px] mr-[30px] Titillium-Regular text-[14px] lg:max-w-[420px] lg:mr-[64px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum
@@ -25,6 +25,7 @@ const Collection = () => {
             className="mt-[24px] w-full rounded-[4px] max-w-[1114px]"
             src={bnNewCollectionMobiel}
             alt="banner com referênciando a nova coleção"
+            loading="lazy"
           />
         </picture>
       </div>

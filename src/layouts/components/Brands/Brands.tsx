@@ -20,27 +20,27 @@ const Brands: React.FC = () => {
       <div className="brandbar mt-[16px] container">
         {/* item1 */}
         <div className="mr-[15px]">
-          <img className="w-[100%]" src={BannerComma} alt="Banner da marca Comma" />
+          <img className="w-[100%]" src={BannerComma} alt="Banner da marca Comma" loading="lazy"/>
         </div>
 
         {/* item 2 */}
         <div className="mr-[15px]">
-          <img className="w-[100%]" src={BannerMelissa} alt="Banner da marca Melissa" />
+          <img className="w-[100%]" src={BannerMelissa} alt="Banner da marca Melissa" loading="lazy"/>
         </div>
 
         {/* item 3 */}
         <div className="mr-[15px]">
-          <img className="w-[100%]" src={BannerForever} alt="Banner da marca Forever 21" />
+          <img className="w-[100%]" src={BannerForever} alt="Banner da marca Forever 21" loading="lazy"/>
         </div>
 
         {/* item 4 */}
         <div className="mr-[15px]">
-          <img className="w-[100%]" src={BannerZara} alt="Banner da marca Zara" />
+          <img className="w-[100%]" src={BannerZara} alt="Banner da marca Zara" loading="lazy"/>
         </div>
 
         {/* item 5 */}
         <div className="">
-          <img className="w-[100%]" src={BannerAnnTaylor} alt="Banner da marca Ann Taylor" />
+          <img className="w-[100%]" src={BannerAnnTaylor} alt="Banner da marca Ann Taylor" loading="lazy"/>
         </div>
       </div>
     </div>

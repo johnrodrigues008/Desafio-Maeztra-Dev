@@ -80,6 +80,7 @@ const Vitrine = () => {
                 src={product.image}
                 alt={product.name}
                 className="w-full mb-[8px]"
+                loading="lazy"
               />
 
               <div className="m-[27px] mb-0 mt-0 text-start">
