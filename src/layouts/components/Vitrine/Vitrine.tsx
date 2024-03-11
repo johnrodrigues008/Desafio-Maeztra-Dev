@@ -9,8 +9,8 @@ interface Product {
   colors: string[];
 }
 
-import BannerFauzSuede from "../../assets/image/Faux-Suede-Mini-Skirt.svg";
-import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt.svg";
+import BannerFauzSuede from "../../assets/image/Faux-Suede-Mini-Skirt.webp";
+import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt.webp";
 
 
 

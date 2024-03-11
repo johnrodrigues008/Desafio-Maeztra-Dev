@@ -132,6 +132,7 @@ const Fullbanner: React.FC = () => {
         onClick={prevSlide}
       >
         <img
+          className="w-[19px]"
           src={iconPrev}
           alt="Icone de prev para voltar para o banner anterior."
         />
@@ -141,6 +142,7 @@ const Fullbanner: React.FC = () => {
         onClick={nextSlide}
       >
         <img
+          className="w-[19px]"
           src={iconNext}
           alt="Icone de next para seguir para o proximo banner."
         />
