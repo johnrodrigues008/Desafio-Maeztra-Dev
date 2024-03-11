@@ -1,4 +1,3 @@
-import "./HomePage.css";
 import Fullbanner from "./components/Fullbanner/Fullbanner";
 import Header from "./components/Header/Header";
 import Why from "./components/Why/Why";
