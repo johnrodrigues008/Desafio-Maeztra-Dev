@@ -91,7 +91,7 @@ const products: Product[] = [
   },
 ];
 
-function Vitrine() {
+const Vitrine: React.FC = () => {
   const [data, setData] = useState<Product[]>([]);
   const carousel = useRef<HTMLDivElement>(null);
 

@@ -96,7 +96,7 @@ const Fullbanner: React.FC = () => {
           onLoad={() => setTransitioning(false)}
         />
       </div>
-      <div className="absolute inset-0 flex justify-center flex-col  px-[63px] sm:px-[83px] lg:ml-[7%]">
+      <div className="absolute inset-0 flex justify-center flex-col px-[63px] sm:px-[83px] lg:ml-[7%]">
         <h2 className="-text--color-5-500 Montserrat-Bold text-[30px] max-w-[220px] sm:max-w-[250px] sm:text-[35px] lg:max-w-[471px] lg:text-[40px]">
           {slides[currentSlide].title}
         </h2>
@@ -109,6 +109,7 @@ const Fullbanner: React.FC = () => {
               ? "transition-opacity duration-1000 ease-in-out opacity-0"
               : ""
           }`}
+          aria-label={slides[currentSlide].buttonText}
         >
           {slides[currentSlide].buttonText}
         </button>
@@ -122,6 +123,8 @@ const Fullbanner: React.FC = () => {
               currentSlide === index ? "-bg--color-1-500" : ""
             }`}
             onClick={() => goToSlide(index)}
+            aria-label={`Slide ${index + 1}`}
+            aria-current={currentSlide === index ? "true" : undefined}
           />
         ))}
       </div>
@@ -129,6 +132,7 @@ const Fullbanner: React.FC = () => {
       <button
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 px-4 py-2 rounded-full text-white"
         onClick={prevSlide}
+        aria-label="Slide anterior"
       >
         <img
           className="w-[19px]"
@@ -139,6 +143,7 @@ const Fullbanner: React.FC = () => {
       <button
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 px-4 py-2 rounded-full text-white"
         onClick={nextSlide}
+        aria-label="Próximo slide"
       >
         <img
           className="w-[19px]"

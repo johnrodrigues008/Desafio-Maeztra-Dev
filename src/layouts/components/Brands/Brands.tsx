@@ -1,10 +1,10 @@
 import "./Brands.css";
 
-import BannerComma from "../../assets/image/banner-coma_.webp";
-import BannerMelissa from "../../assets/image/banner-melissa.webp";
-import BannerForever from "../../assets/image/banner-forever-21.webp";
-import BannerZara from "../../assets/image/banner-zara.webp";
-import BannerAnnTaylor from "../../assets/image/banner-ann-taylor.webp";
+import BannerComma from "../../assets/image/banner-coma-red.webp";
+import BannerMelissa from "../../assets/image/banner-melissa-red.webp";
+import BannerForever from "../../assets/image/banner-forever-21-red.webp";
+import BannerZara from "../../assets/image/banner-zara-red.webp";
+import BannerAnnTaylor from "../../assets/image/banner-ann-taylor-red.webp";
 
 const Brands: React.FC = () => {
   

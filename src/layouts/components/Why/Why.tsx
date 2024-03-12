@@ -8,7 +8,7 @@ import iconTroca from "../../assets/icons/icon-troca.webp";
 import iconEtiqueta from "../../assets/icons/icon-etiqueta.webp";
 import iconFrete from "../../assets/icons/icon-frete.webp";
 
-const Why = () => {
+const Why: React.FC = () => {
   const tipbarRef = useRef<HTMLDivElement>(null);
 
   const isMouseDownRef = useRef(false);

@@ -9,9 +9,9 @@ import iconHeart from "../../assets/icons/icon-heart.webp";
 import iconShopping from "../../assets/icons/icon-shopping.webp";
 import iconDress from "../../assets/icons/icon-dress.webp";
 
-import logo from "../../assets/image/logo.webp";
+import logo from "../../assets/image/logo-red.webp";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [selectedLink, setSelectedLink] = useState<string>("novidades");
 
   const handleLinkClick = (link: string) => {

@@ -1,7 +1,7 @@
 import bnNewCollectionDesktop from "../../assets/image/banner-new-collection-desktop.webp";
 import bnNewCollectionMobiel from "../../assets/image/banner-new-collection-mobile-red.webp";
 
-const Collection = () => {
+const Collection: React.FC = () => {
   return (
     <article className="collection flex justify-center items-center">
       <div className="container px-[20px] lg:p-0 lg:flex lg:items-center">
