@@ -152,6 +152,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconFacebook}
                 alt="Icone do facebook"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -159,6 +160,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconLinkedin}
                 alt="Icone do Linkedin"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -166,6 +168,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconInstagram}
                 alt="Icone do instagram"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -173,6 +176,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconYoutube}
                 alt="Icone do Youtube"
+                loading="lazy"
               />
             </a>
           </div>
@@ -183,6 +187,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconVisa}
                 alt="Icone de pagamento visa"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -190,6 +195,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconMastecard}
                 alt="Icone de pagamento mastecard"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -197,6 +203,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconVisa}
                 alt="Icone simbolizando pagamento com visa"
+                loading="lazy"
               />
             </a>
             <a className="text-[12px] Titillium-Regular mr-[22px]" href="#">
@@ -204,6 +211,7 @@ const Footer: React.FC = () => {
                 className="w-[32px]"
                 src={IconMastecard}
                 alt="Icone simbolizando o pagamento com mastecard"
+                loading="lazy"
               />
             </a>
           </div>
@@ -211,7 +219,12 @@ const Footer: React.FC = () => {
           <div className="pb-[32px] flex items-center -text--color-5-500 lg:mt-0 lg:p-0">
             <div className="links-compan-card">
               <p>Powered by</p>
-              <img className="w-[80px]" src={IconVtex} alt="Icone da vtex" />
+              <img
+                className="w-[80px]"
+                src={IconVtex}
+                alt="Icone da vtex"
+                loading="lazy"
+              />
             </div>
             <div className="links-compan-card ml-[22px]">
               <p>Developed by</p>
@@ -219,6 +232,7 @@ const Footer: React.FC = () => {
                 className="w-[150px]"
                 src={IconMaeztra}
                 alt="Icone da maeztra"
+                loading="lazy"
               />
             </div>
           </div>

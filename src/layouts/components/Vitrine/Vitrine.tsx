@@ -140,7 +140,6 @@ const Vitrine: React.FC = () => {
                     {description}
                   </span>
                   <button
-                    role="Adicionar ao carrinho"
                     className="-bg--color-1-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
                   >
                     Adicionar ao Carrinho
