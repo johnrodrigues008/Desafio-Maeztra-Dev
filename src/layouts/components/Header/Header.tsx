@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
 
-// Importação dos componentes
 import iconDrawer from "../../assets/icons/icon-drawer.webp";
 import iconSearch from "../../assets/icons/icon-search.webp";
 import iconUser from "../../assets/icons/icon-user.webp";

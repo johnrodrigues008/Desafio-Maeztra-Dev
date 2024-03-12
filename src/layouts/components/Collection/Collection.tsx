@@ -4,7 +4,7 @@ import bnNewCollectionMobiel from "../../assets/image/banner-new-collection-mobi
 const Collection: React.FC = () => {
   return (
     <article className="collection flex justify-center items-center">
-      <div className="container px-[20px] lg:p-0 lg:flex lg:items-center">
+      <div className="container px-[20px] flex justify-center flex-col lg:flex-row lg:p-0 lg:jus lg:items-center">
         <div>
           <h2 className="Titillium-Bold text-[24px] w-full">Lorem ipsum </h2>
           <p className="mt-[16px] mr-[30px] Titillium-Regular text-[14px] lg:max-w-[420px] lg:mr-[64px]">
@@ -22,7 +22,7 @@ const Collection: React.FC = () => {
         <picture>
           <source media="(min-width: 1024px)" srcSet={bnNewCollectionDesktop} />
           <img
-            className="mt-[24px] w-full rounded-[4px] max-w-[1114px]"
+            className="mt-[24px] w-full rounded-[4px] max-w-[730px]"
             src={bnNewCollectionMobiel}
             alt="banner com referênciando a nova coleção"
             loading="lazy"

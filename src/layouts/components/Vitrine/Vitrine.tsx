@@ -7,15 +7,6 @@ import iconNext from "../../assets/icons/icon-next.webp";
 import BannerFauzSuede from "../../assets/image/vitrine-Faux-Suede-red.webp";
 import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt-red.webp";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-  colors: string[];
-}
-
 const products: Product[] = [
   {
     id: 1,
@@ -62,37 +53,22 @@ const products: Product[] = [
     image: BannerFauzSuede,
     colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
   },
-  {
-    id: 5,
-    name: "Faux Suede Mini Skirt",
-    price: 500.0,
-    description:
-      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
-    image: BannerFauzSuede,
-    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
-  },
-  {
-    id: 5,
-    name: "Faux Suede Mini Skirt",
-    price: 500.0,
-    description:
-      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
-    image: BannerFauzSuede,
-    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
-  },
-  {
-    id: 5,
-    name: "Faux Suede Mini Skirt",
-    price: 500.0,
-    description:
-      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
-    image: BannerFauzSuede,
-    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
-  },
 ];
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+  colors: string[];
+}
 
 const Vitrine: React.FC = () => {
   const [data, setData] = useState<Product[]>([]);
+  const [selectedColors, setSelectedColors] = useState<{
+    [key: number]: string | null;
+  }>({});
   const carousel = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -111,10 +87,17 @@ const Vitrine: React.FC = () => {
       carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
+  const handleColorClick = (productId: number, color: string) => {
+    setSelectedColors((prevSelectedColors) => ({
+      ...prevSelectedColors,
+      [productId]: color,
+    }));
+  };
+
   if (!data || !data.length) return null;
 
   return (
-    <section className="w-full h-[100vh] mt-[80px] flex  items-center justify-center">
+    <section className="w-full mt-[80px] flex  items-center justify-center">
       <div className="h-full container relative flex flex-col justify-center">
         <div>
           <h2 className="Titillium-Bold text-[32px] text-center mb-[24px]">
@@ -122,20 +105,45 @@ const Vitrine: React.FC = () => {
           </h2>
         </div>
         <div
-          className="carousel h-full px-[38px] overflow-hidden"
+          className="carousel px-[38px] overflow-hidden"
           ref={carousel}
         >
           {data.map((item) => {
-            const { id, name, price, description, image } = item;
+            const { id, name, price, description, image, colors } = item;
+            const selectedColor = selectedColors[id] || null;
             return (
               <div className="item overflow-hidden" key={id}>
                 <div className="image">
                   <img src={image} alt={name} />
                 </div>
-                <div className="info">
-                  <span className="name">{name}</span>
-                  <span className="description">{description}</span>
-                  <span className="price">U$ {price}</span>
+
+                <div className="flex flex-col px-[20px]">
+                  <div className="flex mt-[8px]">
+                    {colors.map((color) => (
+                      <button
+                        key={color}
+                        className={`w-6 h-6 mr-2 rounded-[4px] mt-[8px] ${
+                          selectedColor === color
+                            ? "border-2 border-gray-600"
+                            : ""
+                        }`}
+                        style={{ backgroundColor: color }}
+                        onClick={() => handleColorClick(id, color)}
+                      ></button>
+                    ))}
+                  </div>
+                  <span className="Titillium-Bold -text--color-2-900 text-[20px] mb-[8px]">
+                    R$ {price}
+                  </span>
+                  <span className="Titillium-Regular text-[16px] mb-[8px]">
+                    {name}
+                  </span>
+                  <span className="text-gray-600 text-[12px] mb-[8px]">
+                    {description}
+                  </span>
+                  <button className="-bg--color-1-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                    Adicionar ao Carrinho
+                  </button>
                 </div>
               </div>
             );
@@ -158,6 +166,6 @@ const Vitrine: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Vitrine;

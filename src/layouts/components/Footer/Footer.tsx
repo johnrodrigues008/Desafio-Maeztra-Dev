@@ -8,8 +8,8 @@ import IconYoutube from "../../assets/icons/icon-youtube.webp";
 import IconVisa from "../../assets/icons/icon-visa.webp";
 import IconMastecard from "../../assets/icons/icon-mastecard.webp";
 
-import IconVtex from "../../assets/icons/iconVtexEco.svg";
-import IconMaeztra from "../../assets/icons/iconMaeztra.svg";
+import IconVtex from "../../assets/icons/iconVtexEco.webp";
+import IconMaeztra from "../../assets/icons/iconMaeztra.webp";
 
 const Footer: React.FC = () => {
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
