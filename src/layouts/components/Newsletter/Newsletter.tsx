@@ -3,7 +3,7 @@ const Newsletter = () => {
     <section className="newslletter #FAFAFA flex justify-center items-center flex-col h-[120px] px-[20px] lg:mt-[80px] lg:flex lg:items-center lg:justify-center">
       <div className="container text-center my-[40px] py-[24px] lg:flex lg:justify-center lg:items-center ">
         <label
-          className="Titillium-Bold text-[24px] lg:w-[307px] ml-[15px]"
+          className="Titillium-Bold text-[24px] lg:w-[307px] mr-[15px]"
           htmlFor="newslatter-info"
         >
           Recebe Nossa Newsletter
