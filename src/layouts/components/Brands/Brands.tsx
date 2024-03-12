@@ -10,12 +10,12 @@ const Brands: React.FC = () => {
   
 
   return (
-    <div className="why relative h-[109px] z-10 mt-[40px] lg:mt-[80px] lg:w-full lg:flex lg:items-center lg:justify-center">
+    <div className="why relative h-[109px] z-10 lg:mt-[80px] lg:w-full lg:flex lg:items-center lg:justify-center">
       <div className="lg:container">
         <h2 className="w-full text-center  Titillium-Bold text-[32px] mt-[40px] lg:mt-0 lg:text-[32px] -text--color-2-400">
           Marcas Parceiras
         </h2>
-        <div className="brandsbar mt-[16px]">
+        <div className="brandsbar mt-[16px] ml-[20px]">
           <div className="brandsbar-card flex justify-start items-center rounded-[4px]">
             <img
               className="w-full"

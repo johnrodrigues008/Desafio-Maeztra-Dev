@@ -1,10 +1,10 @@
 import bnNewCollectionDesktop from "../../assets/image/banner-new-collection-desktop.webp";
-import bnNewCollectionMobiel from "../../assets/image/banner-new-collection-mobile.webp";
+import bnNewCollectionMobiel from "../../assets/image/banner-new-collection-mobile-red.webp";
 
 const Collection = () => {
   return (
-    <article className="collection mt-[23px] flex justify-center items-center">
-      <div className="container p-[20px] lg:p-0 lg:flex lg:items-center">
+    <article className="collection flex justify-center items-center">
+      <div className="container px-[20px] lg:p-0 lg:flex lg:items-center">
         <div>
           <h2 className="Titillium-Bold text-[24px] w-full">Lorem ipsum </h2>
           <p className="mt-[16px] mr-[30px] Titillium-Regular text-[14px] lg:max-w-[420px] lg:mr-[64px]">

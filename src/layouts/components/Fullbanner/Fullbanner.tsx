@@ -6,7 +6,7 @@ import iconPrev from "../../assets/icons/icon-prev.webp";
 import iconNext from "../../assets/icons/icon-next.webp";
 
 import BannerCarouselDesk from "../../assets/image/banner-header-desktop.webp";
-import BannerCarouselMobile from "../../assets/image/banner-header-mobile.webp";
+import BannerCarouselMobile from "../../assets/image/banner-header-mobile-red.webp";
 
 const Fullbanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

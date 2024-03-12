@@ -40,7 +40,7 @@ const Header = () => {
             </button>
             <a href="#">
               <img
-                className="w-[110px] h-[11px]"
+                className="w-[110px] lg:w-[147px]"
                 src={logo}
                 alt="Logo escrito MAEZTRA"
               />

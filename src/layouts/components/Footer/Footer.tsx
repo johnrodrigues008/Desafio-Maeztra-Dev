@@ -146,7 +146,7 @@ const Footer: React.FC = () => {
       bg  lg:flex"
       >
         <div className="container flex flex-col justify-center items-center lg:justify-between pt-[24px] lg: lg:flex lg:flex-row lg:[85px] lg:items-center">
-          <div className="pb-[32px] flex lg:items-center lg:p-0">
+          <div className="pb-[32px] flex items-center lg:items-center lg:p-0">
             <a className="text-[12px] Titillium-Regular mr-[22px]">
               <img
                 className="w-[32px]"

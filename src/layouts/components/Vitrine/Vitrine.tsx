@@ -4,8 +4,8 @@ import "./Vitrini.css";
 import iconPrev from "../../assets/icons/icon-prev.webp";
 import iconNext from "../../assets/icons/icon-next.webp";
 
-import BannerFauzSuede from "../../assets/image/Faux-Suede-Mini-Skirt.webp";
-import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt.webp";
+import BannerFauzSuede from "../../assets/image/vitrine-Faux-Suede-red.webp";
+import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt-red.webp";
 
 interface Product {
   id: number;
@@ -114,18 +114,21 @@ function Vitrine() {
   if (!data || !data.length) return null;
 
   return (
-    <section className="w-full mt-[80px] flex  items-center justify-center">
-      <div className="container relative flex flex-col justify-center">
+    <section className="w-full h-[100vh] mt-[80px] flex  items-center justify-center">
+      <div className="h-full container relative flex flex-col justify-center">
         <div>
           <h2 className="Titillium-Bold text-[32px] text-center mb-[24px]">
             As Mais Pedidas
           </h2>
         </div>
-        <div className="carousel pl-[20px] " ref={carousel}>
+        <div
+          className="carousel h-full px-[38px] overflow-hidden"
+          ref={carousel}
+        >
           {data.map((item) => {
             const { id, name, price, description, image } = item;
             return (
-              <div className="item" key={id}>
+              <div className="item overflow-hidden" key={id}>
                 <div className="image">
                   <img src={image} alt={name} />
                 </div>
