@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="mt-[16px] mb-[56px]">
-            <div
+            <ul
               className="flex justify-between"
               onClick={toggleLocationDropdown}
             >
@@ -119,9 +119,9 @@ const Footer: React.FC = () => {
               <li className="Titillium-Bold text-[16px] -text--color-2-900 list-none lg:hidden">
                 {locationDropdownOpen ? "-" : "+"}
               </li>
-            </div>
+            </ul>
 
-            <div
+            <ul
               className={`dropdown ${
                 locationDropdownOpen ? "footerDropOpen" : ""
               } hidden mb-[64px] -text--color-2-900 lg:flex lg:flex-col`}
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
                   Endereço
                 </a>
               </li>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
