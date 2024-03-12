@@ -4,7 +4,7 @@ import bnNewCollectionMobiel from "../../assets/image/banner-new-collection-mobi
 const Collection: React.FC = () => {
   return (
     <article className="collection flex justify-center items-center">
-      <div className="container px-[20px] flex justify-center flex-col lg:flex-row lg:p-0 lg:jus lg:items-center">
+      <div className="container px-[20px] mt-[30px] flex justify-center flex-col lg:flex-row lg:p-0 lg:jus lg:items-center">
         <div>
           <h2 className="Titillium-Bold text-[24px] w-full">Lorem ipsum </h2>
           <p className="mt-[16px] mr-[30px] Titillium-Regular text-[14px] lg:max-w-[420px] lg:mr-[64px]">
