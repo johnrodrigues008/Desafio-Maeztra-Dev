@@ -9,8 +9,6 @@ const Collection = React.lazy(() => import("./components/Collection/Collection")
 const Newsletter = React.lazy(() => import("./components/Newsletter/Newsletter"));
 const Footer = React.lazy(() => import("./components/Footer/Footer"));
 
-// import Teste from "./teste";
-
 const HomePage = () => {
   const [componentsLoaded, setComponentsLoaded] = useState(false);
 
@@ -27,12 +25,11 @@ const HomePage = () => {
       <Header />
       <Fullbanner />
       <Why />
-      <Brands />
-      {/* <Teste /> */}
-      <Vitrine />
 
       {componentsLoaded && (
         <Suspense fallback={<div>Carregando...</div>}>
+          <Brands />
+          <Vitrine />
           <Collection />
           <Newsletter />
           <Footer/>

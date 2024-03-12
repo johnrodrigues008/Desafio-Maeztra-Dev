@@ -104,10 +104,7 @@ const Vitrine: React.FC = () => {
             As Mais Pedidas
           </h2>
         </div>
-        <div
-          className="carousel px-[38px] overflow-hidden"
-          ref={carousel}
-        >
+        <div className="carousel px-[38px] overflow-hidden" ref={carousel}>
           {data.map((item) => {
             const { id, name, price, description, image, colors } = item;
             const selectedColor = selectedColors[id] || null;
@@ -129,6 +126,7 @@ const Vitrine: React.FC = () => {
                         }`}
                         style={{ backgroundColor: color }}
                         onClick={() => handleColorClick(id, color)}
+                        aria-label={`Cor ${color}`}
                       ></button>
                     ))}
                   </div>
@@ -141,7 +139,10 @@ const Vitrine: React.FC = () => {
                   <span className="text-gray-600 text-[12px] mb-[8px]">
                     {description}
                   </span>
-                  <button className="-bg--color-1-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                  <button
+                    role="Adicionar ao carrinho"
+                    className="-bg--color-1-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
+                  >
                     Adicionar ao Carrinho
                   </button>
                 </div>
@@ -152,12 +153,14 @@ const Vitrine: React.FC = () => {
             <button
               className="absolute left-5 top-1/2 transform -translate-y-1/2"
               onClick={handleLeftClick}
+              aria-label="Rolar para a esquerda"
             >
               <img className="w-[20px]" src={iconPrev} alt="Scroll Left" />
             </button>
             <button
               className="absolute right-5 top-1/2 transform -translate-y-1/2"
               onClick={handleRightClick}
+              aria-label="Rolar para a direita"
             >
               <img className="w-[20px]" src={iconNext} alt="Scroll Right" />
             </button>
