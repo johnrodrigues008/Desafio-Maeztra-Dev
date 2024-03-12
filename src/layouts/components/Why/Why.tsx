@@ -117,7 +117,7 @@ const Why = () => {
             src={iconEtiqueta}
             alt="Icone de uma etiqueta simbolizando os descontos"
             loading="lazy"
-          />
+          /> 
           <div className="ml-[21px]">
             <h3 className="Titillium-Bold">Ganhe 5% off</h3>
             <p className="lg:text-[12px]">Pagando à vista no Cartão</p>

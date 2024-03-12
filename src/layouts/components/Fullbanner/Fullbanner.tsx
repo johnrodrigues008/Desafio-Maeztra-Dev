@@ -2,11 +2,9 @@ import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./Fullbanner.css";
 
-// Importação dos icons
 import iconPrev from "../../assets/icons/icon-prev.webp";
 import iconNext from "../../assets/icons/icon-next.webp";
 
-// Importação dos banners
 import BannerCarouselDesk from "../../assets/image/banner-header-desktop.webp";
 import BannerCarouselMobile from "../../assets/image/banner-header-mobile.webp";
 
@@ -70,7 +68,7 @@ const Fullbanner: React.FC = () => {
       setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
       setTimeout(() => {
         setTransitioning(false);
-      }, 1000); // Tempo da transição em milissegundos
+      }, 1000);
     }
   };
 
@@ -80,12 +78,12 @@ const Fullbanner: React.FC = () => {
       setCurrentSlide(index);
       setTimeout(() => {
         setTransitioning(false);
-      }, 1000); // Tempo da transição em milissegundos
+      }, 1000);
     }
   };
 
   return (
-    <div className="relative">
+    <section className="FullBanner relative">
       <div style={{ minHeight: "280px" }} className="fullbanner w-full">
         <img
           className={`w-full ${
@@ -148,7 +146,7 @@ const Fullbanner: React.FC = () => {
           alt="Icone de next para seguir para o proximo banner."
         />
       </button>
-    </div>
+    </section>
   );
 };
 

@@ -67,7 +67,6 @@ const Header = () => {
             </button>
           </div>
 
-          {/* botões */}
           <div className="flex justify-center items-center">
             <button className="hidden lg:flex mr-[39px]">
               <img

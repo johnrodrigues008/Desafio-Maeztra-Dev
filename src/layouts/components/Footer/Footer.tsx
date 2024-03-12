@@ -7,8 +7,9 @@ import IconInstagram from "../../assets/icons/icon-instagram.webp";
 import IconYoutube from "../../assets/icons/icon-youtube.webp";
 import IconVisa from "../../assets/icons/icon-visa.webp";
 import IconMastecard from "../../assets/icons/icon-mastecard.webp";
-import IconVtex from "../../assets/icons/icon-vtex.webp";
-import IconMaeztra from "../../assets/icons/icon-maeztra.webp";
+
+import IconVtex from "../../assets/icons/iconVtexEco.svg";
+import IconMaeztra from "../../assets/icons/iconMaeztra.svg";
 
 const Footer: React.FC = () => {
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
@@ -28,7 +29,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="footer w-full flex justify-center items-center flex-col">
+    <footer className="footer w-full flex justify-center items-center flex-col ">
       <div className="container flex justify-center items-center">
         <div className="w-full px-[20px] lg:max-w-[937px] lg:flex lg:justify-between lg:mt-[41px]">
           <div className="mt-[16px]">
@@ -140,9 +141,12 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center flex-row -bg--color-2-400 h-[85px]">
-        <div className="container flex justify-between items-center">
-          <div className="links-social flex items-center mt-[24px]">
+      <div
+        className="w-full flex justify-center items-center flex-row -bg--color-2-400 
+      bg  lg:flex"
+      >
+        <div className="container flex flex-col justify-center items-center lg:justify-between pt-[24px] lg: lg:flex lg:flex-row lg:[85px] lg:items-center">
+          <div className="pb-[32px] flex lg:items-center lg:p-0">
             <a className="text-[12px] Titillium-Regular mr-[22px]">
               <img
                 className="w-[32px]"
@@ -173,7 +177,7 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          <div className="links-payment flex justify-cen mt-[24px]ter items-center">
+          <div className="pb-[32px] links-payment flex justify-cen mt-[24px] items-center lg:mt-0 lg:p-0">
             <a className="text-[12px] Titillium-Regular mr-[22px]">
               <img
                 className="w-[32px]"
@@ -204,7 +208,7 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          <div className="links-company flex items-center -text--color-5-500">
+          <div className="pb-[32px] flex items-center -text--color-5-500 lg:mt-0 lg:p-0">
             <div className="links-compan-card">
               <p>Powered by</p>
               <img className="w-[80px]" src={IconVtex} alt="Icone da vtex" />

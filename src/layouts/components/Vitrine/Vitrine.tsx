@@ -1,4 +1,11 @@
-import { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import "./Vitrini.css";
+
+import iconPrev from "../../assets/icons/icon-prev.webp";
+import iconNext from "../../assets/icons/icon-next.webp";
+
+import BannerFauzSuede from "../../assets/image/Faux-Suede-Mini-Skirt.webp";
+import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt.webp";
 
 interface Product {
   id: number;
@@ -8,11 +15,6 @@ interface Product {
   image: string;
   colors: string[];
 }
-
-import BannerFauzSuede from "../../assets/image/Faux-Suede-Mini-Skirt.webp";
-import BannerFauzRose from "../../assets/image/ruched-rose-print-mini-skirt.webp";
-
-
 
 const products: Product[] = [
   {
@@ -60,67 +62,99 @@ const products: Product[] = [
     image: BannerFauzSuede,
     colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
   },
+  {
+    id: 5,
+    name: "Faux Suede Mini Skirt",
+    price: 500.0,
+    description:
+      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
+    image: BannerFauzSuede,
+    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
+  },
+  {
+    id: 5,
+    name: "Faux Suede Mini Skirt",
+    price: 500.0,
+    description:
+      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
+    image: BannerFauzSuede,
+    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
+  },
+  {
+    id: 5,
+    name: "Faux Suede Mini Skirt",
+    price: 500.0,
+    description:
+      "A faux suede mini skirt featuring exposed button-front closures and panel seam construction.",
+    image: BannerFauzSuede,
+    colors: ["#DEAf71", "#DEAC71", "#6497D3", "#3C3B79"],
+  },
 ];
 
-const Vitrine = () => {
-  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+function Vitrine() {
+  const [data, setData] = useState<Product[]>([]);
+  const carousel = useRef<HTMLDivElement>(null);
 
-  const handleColorClick = (color: string) => {
-    setSelectedColor(color);
+  useEffect(() => {
+    setData(products);
+  }, []);
+
+  const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (carousel.current)
+      carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
 
+  const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (carousel.current)
+      carousel.current.scrollLeft += carousel.current.offsetWidth;
+  };
+
+  if (!data || !data.length) return null;
+
   return (
-    <section className="vitrine mt-[80px]">
-      <div className="container mx-auto text-center">
-        <h1 className="text-3xl mb-8 Titillium-Bold">As Mais Pedidas</h1>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-[16px]">
-          {products.map((product) => (
-            <div key={product.id} className="w-[100%]  pb-[16px]">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full mb-[8px]"
-                loading="lazy"
-              />
-
-              <div className="m-[27px] mb-0 mt-0 text-start">
-                <div className="h-[210px]">
-                  <div className="flex mb-2">
-                    {product.colors.map((color) => (
-                      <button
-                        key={color}
-                        className={`w-6 h-6 mr-2 rounded-[4px] ${
-                          selectedColor === color
-                            ? "border-2 border-gray-600"
-                            : ""
-                        }`}
-                        style={{ backgroundColor: color.toLowerCase() }}
-                        onClick={() => handleColorClick(color)}
-                      ></button>
-                    ))}
-                  </div>
-
-                  <p className="Titillium-Bold -text--color-2-900 text-[20px] mb-2">
-                    ${product.price}
-                  </p>
-                  <h3 className="Titillium-Regular text-[16px] mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-600 mb-2 text-[12px]">
-                    {product.description}
-                  </p>
+    <section className="w-full mt-[80px] flex  items-center justify-center">
+      <div className="container relative flex flex-col justify-center">
+        <div>
+          <h2 className="Titillium-Bold text-[32px] text-center mb-[24px]">
+            As Mais Pedidas
+          </h2>
+        </div>
+        <div className="carousel pl-[20px] " ref={carousel}>
+          {data.map((item) => {
+            const { id, name, price, description, image } = item;
+            return (
+              <div className="item" key={id}>
+                <div className="image">
+                  <img src={image} alt={name} />
                 </div>
-
-                <button className="-bg--color-1-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                  Adicionar ao Carrinho
-                </button>
+                <div className="info">
+                  <span className="name">{name}</span>
+                  <span className="description">{description}</span>
+                  <span className="price">U$ {price}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+          <div className="mt-auto mb-auto">
+            <button
+              className="absolute left-5 top-1/2 transform -translate-y-1/2"
+              onClick={handleLeftClick}
+            >
+              <img className="w-[20px]" src={iconPrev} alt="Scroll Left" />
+            </button>
+            <button
+              className="absolute right-5 top-1/2 transform -translate-y-1/2"
+              onClick={handleRightClick}
+            >
+              <img className="w-[20px]" src={iconNext} alt="Scroll Right" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Vitrine;
